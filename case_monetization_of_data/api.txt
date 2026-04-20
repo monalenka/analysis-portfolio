@@ -1,0 +1,374 @@
+# request
+POST api/marketing
+{
+    "filters": {
+        "window": "16.01.2026-16.04.26",
+        "gender": [
+            "M",
+            "F"
+        ],
+        "age": [
+            "18-25",
+            "26-35"
+        ],
+        "region": {
+            "city": [
+                "Moscow",
+                "SPB"
+            ]
+        },
+        "income": [
+            "60000-100000",
+            "100001-150000"
+        ],
+        "children": [
+            "0""0-1",
+            "2-3"
+        ],
+        "maritalStatus": true,
+        "employmentDuration": [
+            "0-24",
+        ],
+        "status": [
+            "Official work",
+            "Individual enterpreneur"
+        ],
+        "professionalGroup": [
+            {
+                "group": "Научные работники",
+                "okptdrCodes": [
+                    "10045", // Акклиматизатор
+                    "46990", // Техник-испытатель
+                ],
+                "group": "Стилисты",
+                "okptdrCodes": [
+                    "10555",
+                    "10556",
+                ]
+            }
+        ]
+    },
+    "options": {
+        "financialInsights": true,
+        "behavioralInsights": true,
+        "marketingSignals": {
+            "include": true,
+            "topSegments": 2,
+            "topConversions": 3,
+        }
+    }
+}
+
+# response
+{
+    "code": 200,
+    "message": "Report is ready",
+    "dateTime": "2026-04-01T06:51:49.400832900Z",
+    "showData": true,
+    "data": {
+        "reportId": "f3c69dd6-e4a5-4b5e-9bcd-dd96c839b0c2",
+        "cost": 50000
+    }
+}
+
+GET api/report?reportId=f3c69dd6-e4a5-4b5e-9bcd-dd96c839b0c2
+
+# response
+{
+    "code": 200,
+    "message": "Successfully got report",
+    "dateTime": "2026-04-01T06:51:49.400832900Z",
+    "showData": true,
+    "data": {
+        "reportId": "f3c69dd6-e4a5-4b5e-9bcd-dd96c839b0c2",
+        "matchedRecordsCount": 100000,
+        "filtersApplied": {
+            "gender": [
+                "M",
+                "F"
+            ],
+            "age": [
+                "18-25",
+                "26-35"
+            ],
+            "region": {
+                "city": [
+                    "Moscow",
+                    "SPB"
+                ]
+            },
+            "monthlyIncome": [
+                "60000-100000",
+                "100001-150000"
+            ],
+            "children": [
+                "0-1",
+                "2-3"
+            ],
+            "maritalStatus": true,
+            "employmentDuration": [
+                "0-24"
+            ],
+            "status": [
+                "Official work",
+                "Individual enterpreneur"
+            ],
+            "professionalGroup": [
+                {
+                    "group": "Научные работники",
+                    "okptdrCodes": [
+                        "10045",
+                        "46990"
+                    ]
+                },
+                {
+                    "group": "Стилисты",
+                    "okptdrCodes": [
+                        "10555",
+                        "10556"
+                    ]
+                }
+            ]
+        },
+        "demographicProfile": {
+            "gender": {
+                "values": [
+                    {
+                        "value": "M",
+                        "share": 0.56
+                    },
+                    {
+                        "value": "F",
+                        "share": 0.44
+                    }
+                ]
+            },
+            "age": {
+                "values": [
+                    {
+                        "value": "18-25",
+                        "share": 0.31
+                    },
+                    {
+                        "value": "26-35",
+                        "share": 0.69
+                    }
+                ]
+            },
+            "region": {
+                "values": [
+                    {
+                        "value": "Moscow",
+                        "share": 0.63
+                    },
+                    {
+                        "value": "SPB",
+                        "share": 0.37
+                    }
+                ]
+            },
+            "income": {
+                "values": [
+                    {
+                        "value": "60000-100000",
+                        "share": 0.58
+                    },
+                    {
+                        "value": "100001-150000",
+                        "share": 0.42
+                    }
+                ]
+            },
+            "children": {
+                "values": [
+                    {
+                        "value": "0-1",
+                        "share": 0.71
+                    },
+                    {
+                        "value": "2-3",
+                        "share": 0.29
+                    }
+                ]
+            },
+            "maritalStatus": {
+                "values": [
+                    {
+                        "value": "true",
+                        "share": 0.61
+                    },
+                    {
+                        "value": "false",
+                        "share": 0.39
+                    }
+                ]
+            }
+        },
+        "employmentProfile": {
+            "status": {
+                "values": [
+                    {
+                        "value": "Official work",
+                        "share": 0.64
+                    },
+                    {
+                        "value": "Individual enterpreneur",
+                        "share": 0.36
+                    }
+                ]
+            },
+            "employmentDuration": {
+                "values": [
+                    {
+                        "value": "0-24",
+                        "share": 1.00
+                    }
+                ]
+            },
+            "okpdtrGroup": {
+                "values": [
+                    {
+                        "value": "Научные работники",
+                        "share": 0.60
+                    },
+                    {
+                        "value": "Стилисты",
+                        "share": 0.40
+                    },
+                ]
+            }
+        },
+        "financialInsights": {
+            "avgBalanceRub": 100000,
+            "medianBalanceRub": 80000,
+            "creditPenetration": 0.49,
+            "avgInterestRate": 13.8
+        },
+        "behavioralInsights": {
+            "consumerActivityIndex": 0.81,
+            "onlinePurchaseFrequency": "0,43",
+            "categorySpending": {
+                "electronics": 0.1,
+                "food": 0.35,
+                "transport": 0.1
+                // и много других
+            }
+        },
+        "marketingSignals": {
+            "topSegments": [
+                {
+                    "name": "young_urban_stable_workers",
+                    "share": 0.52,
+                    "conversionScores": {
+                        "values": [
+                            {
+                                "value": "ЧАЙ",
+                                "score": 1.63,
+                                "code": "0903 00 000 0"
+                            },
+                            {
+                                "value": "ДУХИ",
+                                "score": 1.55,
+                                "code": "3303 00 100 0"
+                            },
+                            {
+                                "value": "РУКАВИЦЫ",
+                                "score": 1.40,
+                                "code": "6116 92 000 0"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "name": "early_family_income_growth",
+                    "share": 0.31,
+                    "conversionScore": {
+                        "values": [
+                            //свои товары
+                        ]
+                    }
+                }
+            ]
+        },
+        "privacy": {
+            "kAnonymitySatisfied": true,
+            "threshold": 500
+        }
+    }
+}
+
+
+
+POST api/purchase
+
+{
+    "product": {
+        "category": "ДУХИ",
+        "code": "3303 00 100 0"
+    },
+    "window": "16.01.2026-16.04.26",
+    "options": {
+        "topSegments": 2
+    }
+}
+
+#response
+{
+    "code": 200,
+    "message": "Successfully got report",
+    "dateTime": "2026-04-01T06:51:49.400832900Z",
+    "showData": true,
+    "data": {
+        "reportId": "f3c69dd6-e4a5-4b5e-9bcd-dd96c839b0c2",
+        "product": {
+            "category": "ДУХИ",
+            "code": "3303 00 100 0"
+        },
+        "window": "2026-01-16 / 2026-04-16",
+        "matchedRecordsCount": 8891,
+        "topSpendingSegments": [
+            {
+                "segment": {
+                    "gender": "F",
+                    "age": "26-35",
+                    "income": "100001-150000",
+                    "region": "Moscow"
+                },
+                "metrics": {
+                    "totalSpendRub": 18450000,
+                    "shareOfRevenue": 0.28,
+                    "buyersCount": 7000,
+                    "avgSpendPerUserRub": 13977,
+                    "avgPurchaseCount": 2.4
+                }
+            },
+            {
+                "segment": {
+                    "gender": "F",
+                    "age": "36-45",
+                    "income": "60000-100000",
+                    "region": "SPB"
+                },
+                "metrics": {
+                    "totalSpendRub": 12100000,
+                    "shareOfRevenue": 0.19,
+                    "buyersCount": 1891,
+                    "avgSpendPerUserRub": 12347,
+                    "avgPurchaseCount": 2.1
+                }
+            }
+        ],
+        "overallMetrics": {
+            "totalRevenueRub": 65800000,
+            "totalBuyers": 8891,
+            "avgSpendPerUserRub": 7814,
+            "avgPurchaseCount": 3
+        },
+        "privacy": {
+            "kAnonymitySatisfied": true,
+            "threshold": 500
+        }
+    }
+}
+
+POST api/synthetic-client
