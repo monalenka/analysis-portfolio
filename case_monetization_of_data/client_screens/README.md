@@ -4,8 +4,8 @@
 
 <table>
   <tr>
-    <td><img src="client_sreens/main.png" width="400"></td>
-    <td><img src="client_sreens/advance_income.png" width="400"></td>
+    <td><img src="main.png" width="400"></td>
+    <td><img src="advance_income.png" width="400"></td>
   </tr>
   <tr>
     <td align="center"><b>Категории данных</b></td>
@@ -17,8 +17,8 @@
 
 <table>
   <tr>
-    <td><img src="client_sreens/consent.png" width="400"></td>
-    <td><img src="client_sreens/activity.png" width="400"></td>
+    <td><img src="consent.png" width="400"></td>
+    <td><img src="activity.png" width="400"></td>
   </tr>
   <tr>
     <td align="center"><b>Подписание согласия</b></td>
@@ -30,8 +30,8 @@
 
 <table>
   <tr>
-    <td><img src="client_sreens/real_income.png" width="400"></td>
-    <td><img src="client_sreens/consent_false.png" width="400"></td>
+    <td><img src="real_income.png" width="400"></td>
+    <td><img src="consent_false.png" width="400"></td>
   </tr>
   <tr>
     <td align="center"><b>Выплата вознаграждения</b></td>
