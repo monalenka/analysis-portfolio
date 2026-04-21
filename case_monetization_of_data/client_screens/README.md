@@ -1,11 +1,11 @@
 ## Пользователь банка
 
-Пользователь заходит в мобильное приложение, вкладку “Монетизация данных”. Здесь он может просмотреть и выбрать категории, которые он планирует монетизировать, и предварительную информацию о доходе, основанную на его транзакционной активности и категориях данных, которые он согласен передать.
+Пользователь заходит в мобильное приложение во вкладку “Монетизация данных”. Здесь он может просмотреть и выбрать категории, которые он планирует монетизировать, и предварительную информацию о доходе, основанную на его транзакционной активности и категориях данных, которые он согласен передать.
 
 <table>
   <tr>
-    <td><img src="main.png" width="400"></td>
-    <td><img src="advance_income.png" width="400"></td>
+    <td><img src="main.png" width="200"></td>
+    <td><img src="advance_income.png" width="200"></td>
   </tr>
   <tr>
     <td align="center"><b>Категории данных</b></td>
@@ -17,8 +17,8 @@
 
 <table>
   <tr>
-    <td><img src="consent.png" width="400"></td>
-    <td><img src="activity.png" width="400"></td>
+    <td><img src="consent.png" width="200"></td>
+    <td><img src="activity.png" width="200"></td>
   </tr>
   <tr>
     <td align="center"><b>Подписание согласия</b></td>
@@ -30,8 +30,8 @@
 
 <table>
   <tr>
-    <td><img src="real_income.png" width="400"></td>
-    <td><img src="consent_false.png" width="400"></td>
+    <td><img src="real_income.png" width="200"></td>
+    <td><img src="consent_false.png" width="200"></td>
   </tr>
   <tr>
     <td align="center"><b>Выплата вознаграждения</b></td>
