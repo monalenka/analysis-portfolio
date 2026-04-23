@@ -70,8 +70,24 @@
 
 ---
 
+### TravelTech: резервный сценарий для ML-рекомендаций
+> Кейс от Т-банка
+
+**Задача:** спроектировать резервный механизм для ML-сервиса персонализированных рекомендаций отелей/активностей/маршрутов.
+
+**Артефакты:**
+- BPMN-диаграмма процесса запроса (с таймаутом и fallback-веткой)
+- State Machine Diagram для Circuit Breaker
+- Sequence Diagram для двух сценариев
+- таблица решений логики Fallback Engine
+- таблица нефункциональных требований (таймауты, пороги, время восстановления)
+
+[Подробный разбор кейса case_traveltech_resilience](case_traveltech_resilience)
+
+---
+
 ### Прогнозирование выживаемости пациентов с циррозом печени
-> Совместный проект. EDA, обучение моделей (CatBoost, XGBoost, Optuna), MLOps (Docker, ClearML, Hydra)
+> Совместный проект. Подробный предварительный анализ датасета (EDA), обучение моделей (CatBoost, XGBoost, Optuna), MLOps (Docker, ClearML, Hydra)
 
 [Репозиторий cirrhosis-prediction-mlops](https://github.com/monalenka/cirrhosis-prediction-mlops)
 
