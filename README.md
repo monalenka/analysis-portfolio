@@ -31,7 +31,7 @@
 
 В результате разработан веб-чат с двумя персонами, tenant isolation, забыванием, стримингом и персистентной памятью; а также проведена оценка на бенчмарке LongMemEval.
 
-[дизайн-документ Mindly-Memory-Agent](Mindly-Memory-Agent/docs/ml_system_design_doc.md)
+[Дизайн-документ Mindly-Memory-Agent](https://github.com/poeeeri/Mindly-Memory-Agent/blob/main/docs/ml_system_design_doc.md)
 
 ### Платформа монетизации обезличенных данных с согласия клиента
 > Кейс-интенсив от Т-банка и ТПУ (команда из 2 человек)
